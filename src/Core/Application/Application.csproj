@@ -1,0 +1,29 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Folder Include="Brands\Events\" />
+    <Folder Include="Brands\Queries\" />
+    <Folder Include="Categories\Events\" />
+    <Folder Include="Categories\Queries\" />
+    <Folder Include="Common\Abstractions\" />
+    <Folder Include="Common\Behaviors\" />
+    <Folder Include="Products\Events\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="FluentValidation" Version="11.5.1" />
+    <PackageReference Include="MediatR" Version="12.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Domain\Domain.csproj" />
+  </ItemGroup>
+
+</Project>

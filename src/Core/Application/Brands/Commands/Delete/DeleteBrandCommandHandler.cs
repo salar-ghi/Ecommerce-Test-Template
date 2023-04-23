@@ -24,6 +24,5 @@ public sealed class DeleteBrandCommandHandler : IRequestHandler<DeleteBrandComma
 
         await _writeUOW.BrandWriteRepository.DeleteAsync(entity).ConfigureAwait(false);
         await _writeUOW.SaveChangesAsync(ct);
-
     }
 }

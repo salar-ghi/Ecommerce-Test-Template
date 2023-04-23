@@ -23,7 +23,6 @@ public sealed class AddBrandCommandHandler : IRequestHandler<AddBrandCommand, Br
 
         var entity = _map.Map<Brand>(request);
         var addBrand = await _writeUOW.BrandWriteRepository.AddAsync(entity).ConfigureAwait(false);
-        await _writeUOW.SaveChangesAsync(ct).ConfigureAwait(false);
 
         _log.LogInformation($"Brand {entity.Id} is successfully added");
 

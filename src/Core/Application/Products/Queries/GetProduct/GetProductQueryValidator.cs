@@ -1,5 +1,10 @@
 ﻿namespace Application.Products.Queries.GetProduct;
 
-internal class GetProductQueryValidator
+public sealed class GetProductQueryValidator : AbstractValidator<GetProductQuery>
 {
+    public GetProductQueryValidator()
+    {
+        RuleFor(x => x.Id.Value)
+            .NotNull().WithMessage("Product Id is required");
+    }
 }

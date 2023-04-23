@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Application.Products.Queries.GetProductByBrand;
 
-namespace Application.Products.Queries.GetProductByBrand
+public sealed class GetProductByBrandQueryValidator : AbstractValidator<GetProductByBrandQuery>
 {
-    internal class GetProductByBrandQueryValidator
+    public GetProductByBrandQueryValidator()
     {
+        RuleFor(x => x.Id.Value)
+            .NotNull().WithMessage("Brand Id is required");
+
+        //RuleFor(x => x.PageIndex)
+        //    .GreaterThanOrEqualTo(1).WithMessage("PageIndex at least greater than or equal to 1.");
+
+        //RuleFor(x => x.PageSize)
+        //    .GreaterThanOrEqualTo(1).WithMessage("PageSize at least greater than or equal to 1.");
     }
 }

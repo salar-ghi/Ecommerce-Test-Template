@@ -2,7 +2,6 @@
 
 public class ProductViewModel
 {
-
 }
 
 public record ProductFilterPageVM : BaseFilterPageVM<ProductId>
@@ -15,4 +14,12 @@ public record ProductFilterPageVM : BaseFilterPageVM<ProductId>
     public int BrandId { get; set; }
     //public int PageIndex { get; set; }
     //public int PageSize { get; set; }
+}
+
+public record ProductFilterBrandPageVM : BaseFilterPageVM<BrandId>
+{
+}
+
+public record ProductFilterCategoryPageVM : BaseFilterPageVM<CategoryId>
+{
 }

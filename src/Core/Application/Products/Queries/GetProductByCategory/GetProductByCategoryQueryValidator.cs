@@ -1,12 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Application.Products.Queries.GetProductByCategory;
 
-namespace Application.Products.Queries.GetProductByCategory
+public sealed class GetProductByCategoryQueryValidator : AbstractValidator<GetProductByCategoryQuery>
 {
-    internal class GetProductByCategoryQueryValidator
+    public GetProductByCategoryQueryValidator()
     {
+        RuleFor(x => x.Id)
+            .NotNull().WithMessage("Category Id cannot be null");
+
+        //RuleFor(x => x.PageIndex)
+        //    .GreaterThanOrEqualTo(1).WithMessage("PageIndex at least greater than or equal to 1.");
+
+        //RuleFor(x => x.PageSize)
+        //    .GreaterThanOrEqualTo(1).WithMessage("PageSize at least greater than or equal to 1.");
     }
 }

@@ -1,32 +1,16 @@
-﻿using Domain.UoW;
+﻿using Application.Common.Paging;
 
 namespace Application.Products.Queries.GetProductList;
 
-public sealed class GetProductListQueryValidator : IRequestHandler<GetProductListQuery, PaginitionResDto<List<ProductResDto>>>
+public sealed class GetProductListQueryValidator : AbstractValidator<GetProductListQuery>
 {
-    private readonly IReadUnitOfWork _readUoW;
-    private readonly IMapper _map;
-    private readonly ILogger<GetProductListQueryValidator> _log;
-
-    public GetProductListQueryValidator(IReadUnitOfWork readUoW, IMapper map, ILogger<GetProductListQueryValidator> log)
+    public GetProductListQueryValidator()
     {
-        _readUoW = readUoW;
-        _map = map;
-        _log = log;
-    }
 
+        RuleFor(x => x.PageIndex)
+                .GreaterThanOrEqualTo(1).WithMessage("PageIndex at least greater than or equal to 1.");
 
-    public async Task<PaginitionResDto<List<ProductResDto>>> Handle(GetProductListQuery request, CancellationToken ct)
-    {
-        var productList = await _readUoW.ProductReadRepository.GetByFilterPagedAsync(request).ConfigureAwait(false);
-        PaginitionResDto<List<ProductResDto>> result = new PaginitionResDto<List<ProductResDto>>
-        {
-            Data = _map.Map<List<ProductResDto>>(productList.Item1),
-            TotalCount = productList.Item2,
-            PageIndex = request.PageIndex,
-            PageSize = request.PageSize
-        };
-
-        return result;
+        RuleFor(x => x.PageSize)
+                .GreaterThanOrEqualTo(1).WithMessage("PageSize at least greater than or equal to 1.");
     }
 }

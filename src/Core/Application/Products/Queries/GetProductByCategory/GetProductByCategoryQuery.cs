@@ -1,12 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Application.Products.Queries.GetProductByCategory;
 
-namespace Application.Products.Queries.GetProductByCategory
-{
-    internal class GetProductByCategoryQuery
-    {
-    }
-}
+public sealed record GetProductByCategoryQuery : ProductFilterCategoryPageVM, IRequest<PaginitionResDto<List<ProductResDto>>>;

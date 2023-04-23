@@ -29,6 +29,5 @@ public sealed class GetProductQueryHandler : IRequestHandler<GetProductQuery, Pr
         _log.LogInformation($"Product : { ProductItem } is successfully returned");
 
         return ProductItem;
-
     }
 }

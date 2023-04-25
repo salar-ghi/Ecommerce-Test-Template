@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Application.Categories.Commands.Delete;
 
-namespace Application.Categories.Commands.Delete
+public sealed class DeleteCategoryCommandValidator : AbstractValidator<DeleteCategoryCommand>
 {
-    internal class DeleteCategoryCommandValidator
+    public DeleteCategoryCommandValidator()
     {
+        RuleFor(x => x.Id)
+            .NotEmpty().WithMessage("category Id cann't be null");
     }
 }

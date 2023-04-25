@@ -9,7 +9,6 @@
   <ItemGroup>
     <Folder Include="Brands\Events\" />
     <Folder Include="Categories\Events\" />
-    <Folder Include="Categories\Queries\" />
     <Folder Include="Common\Abstractions\" />
     <Folder Include="Common\Behaviors\" />
     <Folder Include="Products\Events\" />

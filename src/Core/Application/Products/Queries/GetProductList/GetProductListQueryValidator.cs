@@ -1,6 +1,4 @@
-﻿using Application.Common.Paging;
-
-namespace Application.Products.Queries.GetProductList;
+﻿namespace Application.Products.Queries.GetProductList;
 
 public sealed class GetProductListQueryValidator : AbstractValidator<GetProductListQuery>
 {

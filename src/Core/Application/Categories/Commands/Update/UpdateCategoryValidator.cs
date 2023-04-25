@@ -1,12 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Application.Categories.Commands.Update;
 
-namespace Application.Categories.Commands.Update
+public sealed class UpdateCategoryValidator : AbstractValidator<UpdateCategoryCommand>
 {
-    internal class UpdateCategoryValidator
+    public UpdateCategoryValidator()
     {
+        
     }
 }

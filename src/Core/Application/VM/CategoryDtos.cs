@@ -2,7 +2,7 @@
 
 namespace Application.VM;
 
-public record CategoryDtos
+public record CategoryDtos 
 {
     public string Name { get; private set; } = default!;
     public int ParentId { get; private set; } = default!;

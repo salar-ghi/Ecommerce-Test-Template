@@ -1,14 +1,35 @@
-﻿namespace Application.Brands.Queries.GetBrand;
+﻿using Application.Products.Queries.GetProduct;
+
+namespace Application.Brands.Queries.GetBrand;
 
 public sealed class GetBrandQueryHandler : IRequestHandler<GetBrandQuery, BrandResDto>
 {
-    public GetBrandQueryHandler()
+    private readonly IReadUnitOfWork _readUoW;
+    private readonly IMapper _map;
+    private readonly ILogger<GetBrandQueryHandler> _log;
+
+    public GetBrandQueryHandler(IReadUnitOfWork readUoW, IMapper map, ILogger<GetBrandQueryHandler> log)
     {
-        
+        _readUoW = readUoW;
+        _map = map;
+        _log = log;
     }
 
-    public Task<BrandResDto> Handle(GetBrandQuery request, CancellationToken ct)
+    public async Task<BrandResDto> Handle(GetBrandQuery request, CancellationToken ct)
     {
-        throw new NotImplementedException();
+        var entity = await  _readUoW
+            .BrandReadRepository
+            .GetAsync(request.Id)
+            .ConfigureAwait(false);
+
+
+        if (entity.Id.Equals(0))
+            throw new NotFoundException(nameof(Brand), request.Id);
+
+        var brandItem = _map.Map<BrandResDto>(entity);
+        _log.LogInformation($"Brand : {brandItem} is successfully returned");
+
+
+        return brandItem;
     }
 }

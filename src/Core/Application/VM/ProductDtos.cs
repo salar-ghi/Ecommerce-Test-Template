@@ -2,7 +2,6 @@
 
 public record ProductDtos
 {
-
     public Name Name { get; private set; } = default!;
     public Price Price { get; private set; } = default!;
     public ProductStatus ProductStatus { get; private set; }
@@ -14,8 +13,6 @@ public record ProductDtos
     public BrandId BrandId { get; private set; } = default!;
     public CategoryId CategoryId { get; private set; } = default!;
     public IEnumerable<ProductImage> _images { get; private set; } = default!;
-
-
 }
 
 public record ProductResDto : ProductDtos

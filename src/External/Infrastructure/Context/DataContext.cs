@@ -8,12 +8,11 @@ public class DataContext : DbContext
     }
 
 
-    //public DbSet<Brand> Brands => Set<Brand>();
+    
     public DbSet<Brand> Brands { get; set; }
-    //public DbSet<Category> Categories => Set<Category>();
+    
     public DbSet<Category> Categories { get; set; }
 
-    //public DbSet<Product> Products => Set<Product>();
     public DbSet<Product> Products { get; set; }
     public DbContext AppDbContext => this;
 

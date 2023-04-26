@@ -8,6 +8,7 @@ global using Microsoft.EntityFrameworkCore;
 
 global using AutoMapper;
 global using Domain.Enums;
+global using Application.VM;
 global using Domain.ValueObjects.Products;
 global using Microsoft.Extensions.Logging;
 

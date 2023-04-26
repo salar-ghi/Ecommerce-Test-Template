@@ -190,7 +190,6 @@ public class Product
 
     ////
 
-
     public bool CheckIsRemoved(bool? state)
     {
         return IsRemoved = state ?? false;
@@ -236,5 +235,4 @@ public class Product
 
         _images.AddRange(productImages);
     }
-
 }

@@ -17,6 +17,8 @@ public record ProductDtos
 
 public record ProductResDto : ProductDtos
 {
+    public string CategoryName { get; set; } = default!;
+    public string BrandName { get; set; } = default!;
     public Guid Id { get; set; }
 }
 

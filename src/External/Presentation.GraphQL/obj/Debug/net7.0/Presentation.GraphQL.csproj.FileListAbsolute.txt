@@ -1,0 +1,17 @@
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\bin\Debug\net7.0\Presentation.GraphQL.deps.json
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\bin\Debug\net7.0\Presentation.GraphQL.dll
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\bin\Debug\net7.0\Presentation.GraphQL.pdb
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\obj\Debug\net7.0\Presentation.GraphQL.csproj.AssemblyReference.cache
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\obj\Debug\net7.0\Presentation.GraphQL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\obj\Debug\net7.0\Presentation.GraphQL.AssemblyInfoInputs.cache
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\obj\Debug\net7.0\Presentation.GraphQL.AssemblyInfo.cs
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\obj\Debug\net7.0\Presentation.GraphQL.csproj.CoreCompileInputs.cache
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\obj\Debug\net7.0\Presentation.GraphQL.dll
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\obj\Debug\net7.0\refint\Presentation.GraphQL.dll
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\obj\Debug\net7.0\Presentation.GraphQL.pdb
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\obj\Debug\net7.0\ref\Presentation.GraphQL.dll
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\bin\Debug\net7.0\Application.dll
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\bin\Debug\net7.0\Domain.dll
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\bin\Debug\net7.0\Application.pdb
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\bin\Debug\net7.0\Domain.pdb
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.GraphQL\obj\Debug\net7.0\Presentation.GraphQL.csproj.CopyComplete

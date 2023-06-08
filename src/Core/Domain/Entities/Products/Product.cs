@@ -10,7 +10,6 @@ public class Product
 
     public Name Name { get; private set; } = default!;
     
-    // ???? Comment it ????
     public Price Price { get; private set; } = default!;
     public ProductStatus ProductStatus { get; private set; }
     public string Code { get; private set; } = default!;
@@ -28,8 +27,6 @@ public class Product
 
     //public int AvailableStock { get; set; }
 
-    //public bool IsRemoved { get; private set; } = default!;
-    //public bool IsActive { get; private set; } = default!;
 
 
 

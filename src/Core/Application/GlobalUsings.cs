@@ -17,3 +17,5 @@ global using Domain.ValueObjects.Categories;
 global using Application.Brands.Commands.Create;
 global using Application.Products.Commands.Create;
 global using Application.Products.Commands.Update;
+global using Microsoft.Extensions.DependencyInjection;
+

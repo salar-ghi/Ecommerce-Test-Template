@@ -1,0 +1,17 @@
+﻿global using NLog;
+global using MediatR;
+global using NLog.Web;
+global using Application;
+global using Infrastructure;
+global using Application.VM;
+global using Presentation.Rest;
+global using System.Reflection;
+global using Domain.Entities.Products;
+global using Presentation.Rest.Shared;
+global using Microsoft.AspNetCore.Mvc;
+global  using Domain.Entities.Categories;
+global using Domain.ValueObjects.Categories;
+global using System.Text.Json.Serialization;
+global using Application.Categories.Commands.Create;
+global using Application.Categories.Queries.GetCategory;
+global using Application.Categories.Queries.GetCategoryList;

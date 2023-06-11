@@ -22,3 +22,5 @@ global using Infrastructure.Repositories.Categories;
 
 global using Infrastructure.EntityTypeConfiguration;
 global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.Configuration;

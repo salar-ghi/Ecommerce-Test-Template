@@ -1,0 +1,6 @@
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.Rest\obj\Debug\net7.0\Presentation.Rest.csproj.AssemblyReference.cache
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.Rest\obj\Debug\net7.0\Presentation.Rest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.Rest\obj\Debug\net7.0\Presentation.Rest.AssemblyInfoInputs.cache
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.Rest\obj\Debug\net7.0\Presentation.Rest.AssemblyInfo.cs
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.Rest\obj\Debug\net7.0\Presentation.Rest.csproj.CoreCompileInputs.cache
+C:\Users\sAlAr\source\repos\Ecomm\src\External\Presentation.Rest\obj\Debug\net7.0\Presentation.Rest.MvcApplicationPartsAssemblyInfo.cache

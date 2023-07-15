@@ -1,5 +1,4 @@
 ﻿namespace Infrastructure.Mapping;
-
 public class ProductMappingProfile : Profile
 {
     public ProductMappingProfile()

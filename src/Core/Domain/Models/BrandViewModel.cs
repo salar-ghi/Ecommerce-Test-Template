@@ -5,7 +5,7 @@ public record BrandViewModel
 
 }
 
-public record BrandFilterPageVM : BaseFilterPageVM<BrandId>
+public record BrandFilterPageVM : BaseFilterPageVM<int>
 {
     public string Name { get; set; }
 }

@@ -29,7 +29,7 @@ public class WriteUnitOfWork : IWriteUnitOfWork
         }
     }
 
-    public IProductWriteRepository<Product> ProductWriteRepository
+    public IProductWriteRepository ProductWriteRepository
     {
         get
         {
@@ -39,16 +39,16 @@ public class WriteUnitOfWork : IWriteUnitOfWork
 
     public void Dispose()
     {
-        throw new NotImplementedException();
+        _context.Dispose();
     }
 
-    public Task<int> SaveChangesAsync(CancellationToken ct = default)
+    public async Task<int> SaveChangesAsync(CancellationToken ct = default)
     {
-        throw new NotImplementedException();
+        return await _context.SaveChangesAsync(ct);
     }
 
-    public Task<bool> SaveEntitiesAsync(CancellationToken ct = default)
-    {
-        throw new NotImplementedException();
-    }
+    //public async Task<bool> SaveEntitiesAsync(CancellationToken ct = default)
+    //{
+    //    var res = await _context.SaveChangesAsync(ct);
+    //}
 }

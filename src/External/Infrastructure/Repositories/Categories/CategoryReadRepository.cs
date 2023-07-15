@@ -18,22 +18,20 @@ public class CategoryReadRepository : ICategoryReadRepository
                     .ConfigureAwait(false);
     }
 
-    public async Task<Category?> GetAsync(CategoryId Id)
+    public async Task<Category> GetAsync(long Id)
     {
         return await _context
                     .Categories
-                    .Include(c => c.IsRemoved == false)
-                    .FirstOrDefaultAsync(x => x.Id == Id)
+                    .FirstOrDefaultAsync(x => x.Id == Id && x.IsRemoved == false)
                     .ConfigureAwait(false);
     }
 
-    public async Task<Category?> GetAsyncNoTracking(CategoryId Id)
+    public async Task<Category> GetAsyncNoTracking(long Id)
     {
         return await _context
                     .Categories
                     .AsNoTracking()
-                    .Include(c => c.IsRemoved == false)
-                    .FirstOrDefaultAsync(p => p.Id == Id)
+                    .FirstOrDefaultAsync(p => p.Id == Id && p.IsRemoved == false)
                     .ConfigureAwait(false);
     }
 
@@ -60,6 +58,5 @@ public class CategoryReadRepository : ICategoryReadRepository
 
         return
             Tuple.Create(await filteredCategories.ToListAsync(), countOfFilteredCategories);
-
     }
 }

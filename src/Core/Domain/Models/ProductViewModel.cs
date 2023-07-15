@@ -4,7 +4,7 @@ public class ProductViewModel
 {
 }
 
-public record ProductFilterPageVM : BaseFilterPageVM<ProductId>
+public record ProductFilterPageVM : BaseFilterPageVM<Guid>
 {
     //public Guid Id { get; init; }
     //public string SearchTerm { get; set; } = default!;
@@ -16,10 +16,10 @@ public record ProductFilterPageVM : BaseFilterPageVM<ProductId>
     //public int PageSize { get; set; }
 }
 
-public record ProductFilterBrandPageVM : BaseFilterPageVM<BrandId>
+public record ProductFilterBrandPageVM : BaseFilterPageVM<int>
 {
 }
 
-public record ProductFilterCategoryPageVM : BaseFilterPageVM<CategoryId>
+public record ProductFilterCategoryPageVM : BaseFilterPageVM<long>
 {
 }

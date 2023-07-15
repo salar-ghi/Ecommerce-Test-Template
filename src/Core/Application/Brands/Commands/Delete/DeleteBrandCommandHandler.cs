@@ -18,7 +18,7 @@ public sealed class DeleteBrandCommandHandler : IRequestHandler<DeleteBrandComma
 
     public async Task Handle(DeleteBrandCommand request, CancellationToken ct)
     {
-        var entity = await _readUOW.BrandReadRepository.GetAsync(request.Id).ConfigureAwait(false);
+        var entity = await _readUOW.BrandReadRepository.GetByIdAsync(request.Id).ConfigureAwait(false);
         if(entity == null)
             throw new NotFoundException("Brand", request.Id);
 

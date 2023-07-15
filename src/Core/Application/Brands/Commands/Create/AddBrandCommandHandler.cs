@@ -1,4 +1,6 @@
-﻿namespace Application.Brands.Commands.Create;
+﻿using Domain.Aggregates.BrandAggregate;
+
+namespace Application.Brands.Commands.Create;
 
 public sealed class AddBrandCommandHandler : IRequestHandler<AddBrandCommand, BrandResDto>
 {
@@ -22,7 +24,8 @@ public sealed class AddBrandCommandHandler : IRequestHandler<AddBrandCommand, Br
         //};
 
         var entity = _map.Map<Brand>(request);
-        var addBrand = await _writeUOW.BrandWriteRepository.AddAsync(entity).ConfigureAwait(false);
+        //var addBrand = await _writeUOW.BrandWriteRepository.AddAsync(entity).ConfigureAwait(false);
+        await _writeUOW.BrandWriteRepository.AddAsync(entity).ConfigureAwait(false);
 
         _log.LogInformation($"Brand {entity.Id} is successfully added");
 

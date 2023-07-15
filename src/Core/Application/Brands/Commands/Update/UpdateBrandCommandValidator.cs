@@ -4,7 +4,7 @@ public sealed class UpdateBrandCommandValidator : AbstractValidator<UpdateBrandC
 {
     public UpdateBrandCommandValidator()
     {
-        RuleFor(b => b.Id.Value)
+        RuleFor(b => b.Id)
             .NotNull().WithMessage("brand Id cann't be null")
             .NotEqual(0).WithMessage("brand Name cann't be empty or whitespace")
             ;

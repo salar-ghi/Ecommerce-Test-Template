@@ -4,7 +4,7 @@ public sealed class GetProductByBrandQueryValidator : AbstractValidator<GetProdu
 {
     public GetProductByBrandQueryValidator()
     {
-        RuleFor(x => x.Id.Value)
+        RuleFor(x => x.Id)
             .NotNull().WithMessage("Brand Id is required");
 
         //RuleFor(x => x.PageIndex)

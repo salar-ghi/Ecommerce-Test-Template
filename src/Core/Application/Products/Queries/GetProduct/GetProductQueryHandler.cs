@@ -18,7 +18,7 @@ public sealed class GetProductQueryHandler : IRequestHandler<GetProductQuery, Pr
     public async Task<ProductResDto> Handle(GetProductQuery request, CancellationToken ct)
     {
         var entity = await _readUoW.ProductReadRepository
-            .GetAsync(request.Id)
+            .GetByIdAsync(request.Id)
             .ConfigureAwait(false);
 
         if(entity.Id == Guid.Empty)

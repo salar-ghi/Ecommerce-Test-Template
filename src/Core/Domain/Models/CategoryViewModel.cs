@@ -4,7 +4,7 @@ public record CategoryViewModel
 {
 }
 
-public record CategoryFilterPageVM : BaseFilterPageVM<CategoryId>
+public record CategoryFilterPageVM : BaseFilterPageVM<long>
 {
-    public int ParentId { get; set; } = default!;
+    public long ParentId { get; set; } = default!;
 }

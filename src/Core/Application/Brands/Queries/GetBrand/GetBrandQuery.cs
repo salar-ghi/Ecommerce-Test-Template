@@ -1,3 +1,3 @@
 ﻿namespace Application.Brands.Queries.GetBrand;
 
-public sealed record GetBrandQuery(BrandId Id) : IRequest<BrandResDto>;
+public sealed record GetBrandQuery(int Id) : IRequest<BrandResDto>;

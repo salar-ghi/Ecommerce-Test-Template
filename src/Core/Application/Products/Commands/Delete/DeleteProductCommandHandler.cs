@@ -18,7 +18,7 @@ public sealed class DeleteProductCommandHandler : IRequestHandler<DeleteProductC
 
     public async Task Handle(DeleteProductCommand request, CancellationToken ct)
     {
-        var entity = await _readUOW.ProductReadRepository.GetAsync(request.Id).ConfigureAwait(false);
+        var entity = await _readUOW.ProductReadRepository.GetByIdAsync(request.Id).ConfigureAwait(false);
         if (entity == null)
             throw new NotFoundException(nameof(Product), request.Id);
 

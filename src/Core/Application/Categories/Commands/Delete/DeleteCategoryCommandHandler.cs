@@ -21,7 +21,7 @@ public class DeleteCategoryCommandHandler : IRequestHandler<DeleteCategoryComman
         if (entity is null)
             throw new NotFoundException("Category", request.Id);
 
-        await _writeUoW.CategoryWriteRepository.DeleteAsync(entity).ConfigureAwait(false);
+        _writeUoW.CategoryWriteRepository.DeleteAsync(entity); //.ConfigureAwait(false);
         await _writeUoW.SaveChangesAsync(ct).ConfigureAwait(false);
         _log.LogInformation($"Category {entity.Id} is successfully removed.");
     }

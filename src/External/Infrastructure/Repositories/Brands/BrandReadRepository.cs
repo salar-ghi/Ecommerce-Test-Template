@@ -1,6 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-
-namespace Infrastructure.Repositories.Brands;
+﻿namespace Infrastructure.Repositories.Brands;
 
 public class BrandReadRepository : IBrandReadRepository
 {
@@ -20,31 +18,31 @@ public class BrandReadRepository : IBrandReadRepository
             .ConfigureAwait(false);
     }
 
-    public async Task<Brand?> GetAsync(BrandId Id)
+    public async Task<Brand> GetByIdAsync(int Id)
     {
         return await _context
             .Brands
             .Include(x => x.IsRemoved == false)
-            .FirstOrDefaultAsync(b => b.Id.Value == Id)
+            .FirstOrDefaultAsync(b => b.Id == Id)
             .ConfigureAwait(false);
     }
 
-    public async Task<Brand?> GetAsyncNoTracking(BrandId Id)
+    public async Task<Brand> GetAsyncNoTracking(int Id)
     {
         return await _context
             .Brands
             .AsNoTracking()
             .Include(x => x.IsRemoved == false)
-            .FirstOrDefaultAsync(b => b.Id.Value == Id)
+            .FirstOrDefaultAsync(b => b.Id == Id)
             .ConfigureAwait(false);
     }
-
+        
     public async Task<Tuple<List<Brand>, int>> GetByFilterPagedAsync(BrandFilterPageVM request)
     {
         var filteredBrands = _context.Brands.AsQueryable();
-        if (request.Id.Value != 0)
+        if (request.Id != 0)
             filteredBrands = filteredBrands.Include(br => br.IsRemoved == false)
-                .Where(b => b.Id.Value == request.Id.Value);
+                .Where(b => b.Id == request.Id);
 
         if (!string.IsNullOrWhiteSpace(request.SearchTerm))
         {

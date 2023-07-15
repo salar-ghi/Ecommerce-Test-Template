@@ -1,17 +1,17 @@
-﻿namespace Application.VM;
+﻿using Domain.Aggregates.ProductAggregate;
+
+namespace Application.VM;
 
 public record ProductDtos
 {
-    public Name Name { get; private set; } = default!;
-    public Price Price { get; private set; } = default!;
+    public string Name { get; private set; } = default!;
     public ProductStatus ProductStatus { get; private set; }
     public string Code { get; private set; } = default!;
     public string? Description { get; private set; }
-    public Size Size { get; private set; } = default!;
     public Stock Stock { get; private set; } = default!;
     public Dimensions Dimensions { get; private set; } = default!;
-    public BrandId BrandId { get; private set; } = default!;
-    public CategoryId CategoryId { get; private set; } = default!;
+    public int BrandId { get; private set; } = default!;
+    public long CategoryId { get; private set; } = default!;
     public IEnumerable<ProductImage> _images { get; private set; } = default!;
 }
 
@@ -30,7 +30,7 @@ public record ProductReqDto : ProductDtos
 
 public record ProductUpdateReqDto : ProductDtos
 {
-    public ProductId Id { get; private set; } = default!;
+    public Guid Id { get; private set; } = default!;
 }
 
 

@@ -1,6 +1,4 @@
-﻿using System.Security.Cryptography.X509Certificates;
-
-namespace Infrastructure.Repositories.Brands;
+﻿namespace Infrastructure.Repositories.Brands;
 
 public class BrandWriteRepository : IBrandWriteRepository<Brand>
 {

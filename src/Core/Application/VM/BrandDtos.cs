@@ -13,14 +13,14 @@ public record BrandReqDto : BrandDtos { }
 
 public record BrandUpdateReqDto : BrandDtos 
 {
-    public BrandId Id { get; init; }
+    public int Id { get; init; }
 }
 
 
 
 public record BrandResDto : BrandDtos
 {
-    public BrandId Id { get; private set; } = default!;
+    public int Id { get; private set; } = default!;
 }
 
 

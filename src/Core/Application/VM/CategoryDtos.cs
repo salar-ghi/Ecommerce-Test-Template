@@ -1,6 +1,4 @@
-﻿using Domain.ValueObjects.Categories;
-
-namespace Application.VM;
+﻿namespace Application.VM;
 
 public record CategoryDtos 
 {
@@ -25,7 +23,7 @@ public record CategoryResDto : CategoryDtos
 
 public record CategoryReqDto : CategoryDtos
 {
-    public CategoryId Id { get; init; } = default!;
+    public long Id { get; init; } = default!;
 }
 
 

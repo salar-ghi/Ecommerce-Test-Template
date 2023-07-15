@@ -6,4 +6,5 @@ public interface IReadUnitOfWork : IUnitOfWork , IDisposable
     IBrandReadRepository BrandReadRepository { get; }
     IProductReadRepository ProductReadRepository { get; }
 
+    //int complete()
 }

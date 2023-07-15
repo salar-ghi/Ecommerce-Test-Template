@@ -4,7 +4,7 @@ public sealed class DeleteProductCommandValidator : AbstractValidator<DeleteProd
 {
     public DeleteProductCommandValidator()
     {
-        RuleFor(x => x.Id.Value)
+        RuleFor(x => x.Id)
             .NotNull().WithMessage("Product Id is required");
 
     }

@@ -1,6 +1,4 @@
-﻿using Application.Products.Queries.GetProduct;
-
-namespace Application.Brands.Queries.GetBrand;
+﻿namespace Application.Brands.Queries.GetBrand;
 
 public sealed class GetBrandQueryHandler : IRequestHandler<GetBrandQuery, BrandResDto>
 {
@@ -19,7 +17,7 @@ public sealed class GetBrandQueryHandler : IRequestHandler<GetBrandQuery, BrandR
     {
         var entity = await  _readUoW
             .BrandReadRepository
-            .GetAsync(request.Id)
+            .GetByIdAsync(request.Id)
             .ConfigureAwait(false);
 
 

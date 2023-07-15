@@ -1,6 +1,4 @@
-﻿using Domain.Entities.Categories;
-
-namespace Application.Categories.Commands.Create;
+﻿namespace Application.Categories.Commands.Create;
 
 public sealed class CreateCategoryCommandHandler : IRequestHandler<CreateCategoryCommand, CategoryResDto>
 {

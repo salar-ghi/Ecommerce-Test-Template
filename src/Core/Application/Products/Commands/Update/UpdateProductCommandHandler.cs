@@ -1,6 +1,4 @@
-﻿using MediatR;
-
-namespace Application.Products.Commands.Update;
+﻿namespace Application.Products.Commands.Update;
 
 public sealed record UpdateProductCommandHandler : IRequestHandler<UpdateProductCommand>
 {
@@ -19,7 +17,7 @@ public sealed record UpdateProductCommandHandler : IRequestHandler<UpdateProduct
 
     public async Task Handle(UpdateProductCommand request, CancellationToken ct)
     {
-        var entity = await _readUOW.ProductReadRepository.GetAsync(request.Id).ConfigureAwait(false);
+        var entity = await _readUOW.ProductReadRepository.GetByIdAsync(request.Id).ConfigureAwait(false);
         if (entity is null)
             throw new NotFoundException(nameof(Product), request.Id);
 
